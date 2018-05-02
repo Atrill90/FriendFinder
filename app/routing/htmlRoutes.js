@@ -1,26 +1,41 @@
+const express = require('express');
+const router = express.Router();
 var path = require("path");
+var newFriend = require("../data/friends")
 
-
-// ===============================================================================
-// ROUTING
-// ===============================================================================
-
-module.exports = function(app) {
   // HTML GET Requests
   // Below code handles when users "visit" a page.
   // In each of the below cases the user is shown an HTML page of content
   // ---------------------------------------------------------------------------
 
-  app.get("/survey", function (req, res) {
+router.get("/survey", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/survey.html"));
 });
 
-app.get("/", function (req, res) {
+router.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
 });
 
   // If no matching route is found default to home
-  app.get("*", function(req, res) {
+  router.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
-};
+
+  router.post("/survey", function(req, res) {
+    console.log(req.body);
+    res.send("success");
+   let name = req.body.name;
+   let score = parseInt(req.body.q1) + parseInt(req.body.q2) + parseInt(req.body.q3) + parseInt(req.body.q4) + parseInt(req.body.q5) + parseInt(req.body.q6) + parseInt(req.body.q7) + parseInt(req.body.q8) + parseInt(req.body.q9) + parseInt(req.body.q10);
+
+   let totalValues = newFriend.map(element => {
+      return element.scores.reduce((totalValue, currentValue)=>{
+        return totalValue + currentValue;
+      });
+      
+    });
+   console.log(totalValues);
+    
+    });
+
+
+  module.exports = router;

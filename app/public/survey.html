@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                About you
+            </div>
+            <div class="card-body">
+                <form action="/survey" method="POST" role="form" >
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phot">Photo</label>
+                        <input type="text" class="form-control" id="photo" name="photo">
+                    </div>
+                    <hr>
+                    <h3>
+                        <strong>Question 1</strong>
+                    </h3>
+                    <h4>Ben is a baby</h4>
+                    <select class="chosen-select" id="q1" name ="q1">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <h3>
+                        <strong>Question 2</strong>
+                    </h3>
+                    <h4>Victoria is actually a cat in human form</h4>
+                    <select class="chosen-select" id="q2" name ="q2">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <h3>
+                        <strong>Question 3</strong>
+                    </h3>
+                    <h4>Trey's real name is Treyvon</h4>
+                    <select class="chosen-select" id="q3" name ="q3">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <h3>
+                        <strong>Question 4</strong>
+                    </h3>
+                    <h4>Darren codes 16 hours a day</h4>
+                    <select class="chosen-select" id="q4" name ="q4">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <h3>
+                        <strong>Question 5</strong>
+                    </h3>
+                    <h4>Carlos runs 4 miles every day</h4>
+                    <select class="chosen-select" id="q5" name ="q5">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <h3>
+                        <strong>Question 6</strong>
+                    </h3>
+                    <h4>Alex hosts the best study group</h4>
+                    <select class="chosen-select" id="q6" name ="q6">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <h3>
+                        <strong>Question 7</strong>
+                    </h3>
+                    <h4>The new Star Wars movies aren't good</h4>
+                    <select class="chosen-select" id="q7" name ="q7">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <h3>
+                        <strong>Question 8</strong>
+                    </h3>
+                    <h4>Trump should tweet more often</h4>
+                    <select class="chosen-select" id="q8" name ="q8">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <h3>
+                        <strong>Question 9</strong>
+                    </h3>
+                    <h4>Halo is better than Call of Duty</h4>
+                    <select class="chosen-select" id="q9" name ="q9">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                    <h3>
+                        <strong>Question 10</strong>
+                    </h3>
+                    <h4>Dogs are better than cats</h4>
+                    <select class="chosen-select" id="q10" name ="q10">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                
+                <br>
+                <div class="text-right">
+                    <button type="submit" class="btn btn-primary btn-md" id="submit">Submit</button>
+                </div>
+            </form>
+            </div>
+        </div>
+        <!-- <script type="text/javascript">
+            var userData = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
+        </script> -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,11 +1,16 @@
-var friendData = require("../data/friends.js");
+// var friendData = require("../data/friends.js");
+const express = require('express');
+const router = express.Router();
+var path = require("path");
 
-module.exports = function(app) {
 
-app.get("/api/friends", function(req, res) {
+
+router.get("/friends", function(req, res) {
     res.sendFile(path.join(__dirname, "friends.js"));
   });
- app.post("/api/friends", function(req, res) {
+ router.post("/survey", function(req, res) {
+  console.log(req.body);
+  /*
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body-parser middleware
     var newFriend = req.body;
@@ -19,5 +24,8 @@ app.get("/api/friends", function(req, res) {
     characters.push(newFriend);
   
     res.json(newFriend);
+    */
   });
-}
+
+
+  module.exports = router;
