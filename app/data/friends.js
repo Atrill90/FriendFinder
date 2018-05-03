@@ -32,7 +32,7 @@ let newFriend = [{
     },
     {
         "name": "Victoria League",
-        "photo": "../public/images/Victoria.png",
+        "photo": "../images/Victoria.png",
         "scores": [
             4,
             1,
@@ -49,7 +49,7 @@ let newFriend = [{
     },
     {
         "name": "Darren Kay",
-        "photo": "../public/images/Darren.png",
+        "photo": "../images/Darren.png",
         "scores": [
             1,
             5,

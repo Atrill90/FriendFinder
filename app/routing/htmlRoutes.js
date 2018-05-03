@@ -17,15 +17,15 @@ router.get("/", function (req, res) {
 });
 
   // If no matching route is found default to home
-  router.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
-  });
+  // router.get("*", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/home.html"));
+  // });
 
   router.post("/survey", function(req, res) {
     console.log(req.body);
     // res.send("success");
    let name = req.body.name;
-   let score = parseInt(req.body.q1) + parseInt(req.body.q2) + parseInt(req.body.q3) + parseInt(req.body.q4) + parseInt(req.body.q5) + parseInt(req.body.q6) + parseInt(req.body.q7) + parseInt(req.body.q8) + parseInt(req.body.q9) + parseInt(req.body.q10);
+   let score = parseInt(req.body.scores[0]) + parseInt(req.body.scores[1]) + parseInt(req.body.scores[2]) + parseInt(req.body.scores[3]) + parseInt(req.body.scores[4]) + parseInt(req.body.scores[5]) + parseInt(req.body.scores[6]) + parseInt(req.body.scores[7]) + parseInt(req.body.scores[8]) + parseInt(req.body.scores[9]);
 
    let totalValues = newFriend.map(element => {
       return element.scores.reduce((totalValue, currentValue)=>{
@@ -56,7 +56,7 @@ router.get("/", function (req, res) {
     console.log(lowestIndex);
     let yourMatch = newFriend[lowestIndex];
     console.log(yourMatch);
-    
+    res.send(yourMatch);
     });
 
   
