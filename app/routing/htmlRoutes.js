@@ -23,7 +23,7 @@ router.get("/", function (req, res) {
 
   router.post("/survey", function(req, res) {
     console.log(req.body);
-    res.send("success");
+    // res.send("success");
    let name = req.body.name;
    let score = parseInt(req.body.q1) + parseInt(req.body.q2) + parseInt(req.body.q3) + parseInt(req.body.q4) + parseInt(req.body.q5) + parseInt(req.body.q6) + parseInt(req.body.q7) + parseInt(req.body.q8) + parseInt(req.body.q9) + parseInt(req.body.q10);
 
@@ -31,11 +31,34 @@ router.get("/", function (req, res) {
       return element.scores.reduce((totalValue, currentValue)=>{
         return totalValue + currentValue;
       });
-      
     });
-   console.log(totalValues);
+    let scoreDiff = totalValues.map(element =>{
+      return Math.abs(element - score);
+    })
+
+    Array.min = function( array ){
+        return Math.min.apply( Math, array );
+    };
+    
+    let minVal = Array.min(scoreDiff);
+    
+    let lowestIndex = scoreDiff.indexOf(minVal);
+    
+    // console.log(minVal);
+    
+    // console.log(`FriendsScore: ${totalValues}`);
+    
+    
+    // console.log(`Userscore: ${score}`);
+    
+    // console.log(`scoreDifference: ${scoreDiff}`);
+    
+    console.log(lowestIndex);
+    let yourMatch = newFriend[lowestIndex];
+    console.log(yourMatch);
     
     });
 
+  
 
   module.exports = router;
