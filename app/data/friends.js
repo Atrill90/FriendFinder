@@ -15,7 +15,7 @@ let newFriend = [{
         ]
     }, {
         "name": "Ben Vaccaro",
-        "photo": "../public/images/Ben.png",
+        "photo": "../images/Ben.png",
         "scores": [
             3,
             1,
@@ -66,7 +66,7 @@ let newFriend = [{
     },
     {
         "name": "Carlos Bejar",
-        "photo": "../public/images/Carlos.png",
+        "photo": "../images/Carlos.png",
         "scores": [
             1,
             5,
@@ -83,7 +83,7 @@ let newFriend = [{
     },
     {
         "name": "John Dinsmore",
-        "photo": "../public/images/John.png",
+        "photo": "../images/John.png",
         "scores": [
             4,
             2,
@@ -100,7 +100,7 @@ let newFriend = [{
     },
     {
         "name": "Mark Powalisz",
-        "photo": "../public/images/Mark.png",
+        "photo": "../images/Mark.png",
         "scores": [
             3,
             3,
@@ -117,7 +117,7 @@ let newFriend = [{
     },
     {
         "name": "Tamara Hall",
-        "photo": "../public/images/Tamara.png",
+        "photo": "../images/Tamara.png",
         "scores": [
             4,
             4,
@@ -134,7 +134,7 @@ let newFriend = [{
     },
     {
         "name": "Trey Alabama",
-        "photo": "../public/images/Trey.png",
+        "photo": "../images/Trey.png",
         "scores": [
             1,
             1,
@@ -150,7 +150,7 @@ let newFriend = [{
 
     },{
         "name": "Alex Trilling",
-        "photo": "../public/images/Alex.png",
+        "photo": "../images/Alex.png",
         "scores": [
             5,
             5,
