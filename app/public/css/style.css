@@ -10,7 +10,7 @@ body{
 background-color: black;
 color: white;
 }
-form{
+#surveyBody{
     background-image: url(../images/Background-60.png);
     background-repeat: no-repeat;
     background-size: cover;
